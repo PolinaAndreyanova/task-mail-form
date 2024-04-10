@@ -1,3 +1,21 @@
+<?php
+include_once("functions-library.php");
+include_once("SendMailSmtpClass.php");
+
+if ($_POST) {
+    $receiverName = $_POST["receiver-name"];
+    $receiverEmail = $_POST["receiver-email"];
+
+    $senderName = $_POST["sender-name"];
+    $senderEmail = $_POST["sender-email"];
+
+    $message = $_POST["message"];
+
+    SendMail($receiverName, $receiverEmail, $senderName, $senderEmail, $message);
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,7 +25,7 @@
     <title>Форма</title>
 </head>
 <body class="content">
-    <form class="content__form" action="form-handler.php" method="post">
+    <form class="content__form" method="post">
         <h1 class="content__header">Форма</h1>
 
         <h2 class="content__inputsHeader">Получатель</h2>
