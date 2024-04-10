@@ -1,13 +1,13 @@
 <?php
 function NameValidation(string $name): bool
 {
-    $regex = '/^[а-яА-ЯёЁ\s]+$/s';
+    $regex = '/^([а-яА-ЯёЁ]+)(?:$| ([а-яА-ЯёЁ]+$))/s';
     return preg_match($regex, $name);
 }
 
 function EmailValidation(string $email): bool
 {
-    $regex = '//s';
+    $regex = '/(^([a-zA-Z0-9][a-zA-Z0-9._-]{0,}[a-zA-Z0-9]{0,})@(?:[a-zA-Z0-9][a-zA-Z0-9_-]{0,}[a-zA-Z0-9]{0,}\.)+[a-zA-Z0-9][a-zA-Z0-9_-]{0,}[a-zA-Z0-9]{0,}$)/s';
     return preg_match($regex, $email);
 }
 

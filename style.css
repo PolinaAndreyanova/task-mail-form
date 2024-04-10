@@ -42,10 +42,19 @@
     cursor: pointer;
 }
 
-/* .content__feedback {
+.content__feedback {
     display: inline-block;
     margin: 10px auto;
-} */
+}
+
+.content__feedback_type_error {
+    font-size: 10px;
+    color: red;
+}
+
+.content__feedback_type_success {
+    color: green;
+}
 
 .content__inputsHeader {
     margin: 10px 0;
